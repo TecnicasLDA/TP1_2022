@@ -1,2 +1,14 @@
 # TP1_2022
-Repositorio del TP1 del grupo de Aruani, De Mezzo y Lopez
+Juan Aruani <br>
+Facundo De Mezzo <br>
+María Emilia López <br>
+
+<p>
+ Profesores 
+</p>
+
+<h1> R. Palma </h1>
+<h1> A. Gomez </h1>
+
+
+
