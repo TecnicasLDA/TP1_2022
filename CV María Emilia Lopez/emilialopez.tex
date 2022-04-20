@@ -1,0 +1,239 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.6.4, 13 Nov 2021) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+ %\documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1,5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{Anaranjado}{HTML}{EC680C}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{rueda}{HTML}{C34A08}
+% \colorlet{name}{black}
+ \colorlet{tagline}{SlateGrey}
+\colorlet{heading}{Anaranjado}
+\colorlet{headingrule}{Anaranjado}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{SlateGrey}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{María Emilia Lopez}
+\tagline{Estudiante de Ingeniería  Industrial}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoL{3.5cm}{Foto Cv.jpeg}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{emilia.lop49@gmail.com}
+  \phone{+549(263)4556208}
+
+
+  \address{Dr. Minoprio 1571, Capital}
+  \location{Mendoza, Argentina}
+  
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experiencia}
+
+\cvevent{}{San Gabriel S.A.}{Marzo 2021 -- Febrero 2022}{Santa Rosa, Mendoza, Argentina}
+
+
+\divider
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+
+
+\cvsection{Un dia en mi vida}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+\hspace*{-1em}  %% quick hack to move the wheelchart a bit left
+\wheelchart{1.5cm}{0.5cm}{%
+  10/13em/rueda!30/Entrenamiento y Actividad física,
+  25/9em/rueda!60/Horas de sueño y descanso,
+  5/11em/rueda!10/Navegar por las redes sociale,
+  20/11em/rueda!40/Familia y amigos,
+  5/8em/rueda!20/Aprender Ingles,
+  30/9em/rueda/Estudios,
+  5/8em/rueda!20/Trabajo,
+}
+
+
+\cvsection{Idiomas}
+
+\cvskill{Español}{5}
+% \divider
+
+\cvskill{Inglés}{4}
+% \divider
+
+\cvskill{Italiano}{2.5}
+
+
+\cvsection{Educación}
+
+\cvevent{Bachiller en Ciencias Sociales y Humanidad}{Escuela Francisco M. Croce}{2013 -- 2017}{Santa Rosa, Mendoza}
+
+\divider
+
+\cvevent{Ingeniería Industrial}{Universidad Nacional de Cuyo}{2018 -- Actualidad}{Mendoza}
+
+
+
+\switchcolumn
+
+
+
+
+\cvsection{Filosofía de vida}
+\begin{quote}
+``La verdadera sabiduría está en reconocer la propia ignorancia.''
+\end{quote}
+
+\cvsection{Orgullosa de }
+
+\cvachievement{\faTrophy}{Obtener 1er puesto en liga santarrosina de hockey}
+
+\divider
+
+\cvachievement{\faSchool}{Haber obtenido el 3er mejor promedio de la Escuela Juan Pringles}
+
+\divider
+
+\cvachievement{\faSchool}{Haber obtenido el 2do mejor promedio de la Escuela Francisco Croce }
+
+\divider
+
+
+
+\cvsection{Fortalezas}
+
+\cvtag{Responsable}
+\cvtag{Amable}
+\cvtag{Positiva}
+\cvtag {Organizada}
+
+\divider\smallskip
+
+\cvtag{AR}
+\cvtag{Manejo de Excel}
+\cvtag{Manejo de Python}
+
+
+
+\cvsection{Estudios y Capacitación}
+
+% \cvref{name}{email}{mailing address}
+\cvevent  {Excel}{Nivel Avandado}{Agosto -- Dic. 2021}{Facultad de 
+Derecho}
+
+\divider
+
+\cvevent {Python}{Nivel Básico}{2021}{Facultad de Ingeniería}
+
+\end{paracol}
+
+\end{document}
